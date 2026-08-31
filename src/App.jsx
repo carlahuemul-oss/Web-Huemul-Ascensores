@@ -18,7 +18,8 @@ import trabajando from "./assets/galeria/Trabajando.png";
 
 function IconPhone() {
   const whatsappUrgencias =
-  "https://wa.me/5493512700691?text=Hola%20Huemul%20Ascensores%2C%20necesito%20asistencia%20urgente";
+    "https://wa.me/5493512700691?text=Hola%20Huemul%20Ascensores%2C%20necesito%20asistencia%20urgente";
+
   return (
     <svg viewBox="0 0 24 24" aria-hidden="true">
       <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.79 19.79 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.12.9.33 1.78.62 2.64a2 2 0 0 1-.45 2.11L8 9.75a16 16 0 0 0 6 6l1.28-1.28a2 2 0 0 1 2.11-.45c.86.29 1.74.5 2.64.62A2 2 0 0 1 22 16.92z" />
@@ -104,8 +105,7 @@ function IconInstalaciones() {
 }
 
 function App() {
-  const whatsappUrgencias =
-    "https://wa.me/5493512700691";
+  const whatsappUrgencias = "https://wa.me/5493512700691";
 
   return (
     <div className="app">
@@ -488,10 +488,6 @@ function App() {
                       </div>
                     </div>
                   </div>
-
-                  <p className="trust-note">
-                    Web Master "Libélula" copyright © 2024. Todos los derechos reservados.
-                  </p>
                 </div>
               </div>
 
@@ -579,6 +575,22 @@ function App() {
           </div>
         </section>
       </main>
+
+      {/* PIE DE PÁGINA */}
+
+      <footer className="site-footer">
+        <p>
+          © {new Date().getFullYear()} Huemul Ascensores. Todos los derechos
+          reservados. | Diseñado por{" "}
+          <a
+            href="https://wa.me/5493515402506?text=Hola%20Carla,%20me%20gustar%C3%ADa%20consultar%20por%20un%20sitio%20web"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Carla Guerra Giovanetti
+          </a>
+        </p>
+      </footer>
 
       <a
         className="whatsapp-float"
