@@ -1588,3 +1588,55 @@ textarea {
     padding: 18px;
   }
 }
+/* =========================================================
+   FOOTER
+========================================================= */
+
+.site-footer {
+  width: 100%;
+
+  padding: 28px 24px;
+
+  background: #050807;
+  border-top: 1px solid rgba(126, 214, 160, 0.16);
+
+  text-align: center;
+}
+
+.site-footer p {
+  margin: 0;
+
+  color: rgba(255, 255, 255, 0.55);
+
+  font-size: 11px;
+  line-height: 1.6;
+  letter-spacing: 0.2px;
+}
+
+.site-footer a {
+  color: #7ed6a0;
+
+  font-weight: 700;
+
+  text-decoration: none;
+
+  transition: color 0.2s ease;
+}
+
+.site-footer a:hover {
+  color: #ffffff;
+  text-decoration: underline;
+}
+
+/* FOOTER EN MÓVIL */
+
+@media (max-width: 760px) {
+  .site-footer {
+    padding: 24px 18px;
+  }
+
+  .site-footer p {
+    font-size: 10px;
+    line-height: 1.7;
+  }
+}
