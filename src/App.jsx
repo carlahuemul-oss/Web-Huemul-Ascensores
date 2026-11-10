@@ -1,4 +1,3 @@
-import { useRef } from "react";
 import Navbar from "./components/Navbar.jsx";
 import Hero from "./components/Hero.jsx";
 import PhotoGallery from "./components/PhotoGallery.jsx";
@@ -139,13 +138,6 @@ function IconInstalaciones() {
 
 function App() {
   const whatsappUrgencias = "https://wa.me/5493512700691";
-  const clientsTrack = useRef(null);
-  const moveClients = (direction) => {
-    const track = clientsTrack.current;
-    if (!track) return;
-    const card = track.querySelector(".client-logo");
-    track.scrollBy({ left: direction * ((card?.offsetWidth || 180) + 24), behavior: "smooth" });
-  };
 
   return (
     <div className="app">
@@ -260,16 +252,18 @@ function App() {
               primer nivel en toda la provincia.
             </p>
 
-            <div className="clients-carousel" role="region" aria-label="Logos de clientes de Huemul">
-              <button className="clients-arrow" type="button" aria-label="Clientes anteriores" onClick={() => moveClients(-1)}>‹</button>
-              <div className="clients-grid" ref={clientsTrack} tabIndex={0}>
-                {clientes.map(([src, nombre, oscuro]) => (
-                  <div className={`client-logo${oscuro ? " client-logo-dark" : ""}`} key={nombre}>
-                    <img src={src} alt={nombre} loading="lazy" />
+            <div className="clients-carousel" role="region" aria-label="Logos de clientes de Huemul" tabIndex={0}>
+              <div className="clients-grid">
+                {[0, 1].map((copy) => (
+                  <div className="clients-group" key={copy} aria-hidden={copy === 1 ? true : undefined}>
+                    {clientes.map(([src, nombre, oscuro]) => (
+                      <div className={`client-logo${oscuro ? " client-logo-dark" : ""}`} key={nombre}>
+                        <img src={src} alt={copy === 0 ? nombre : ""} />
+                      </div>
+                    ))}
                   </div>
                 ))}
               </div>
-              <button className="clients-arrow" type="button" aria-label="Clientes siguientes" onClick={() => moveClients(1)}>›</button>
             </div>
           </div>
         </section>

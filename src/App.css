@@ -560,38 +560,25 @@ textarea {
 ========================================================= */
 
 .clients-carousel {
-  display: flex;
-  align-items: center;
-  gap: 10px;
+  overflow: hidden;
   margin-top: 45px;
 }
 
 .clients-grid {
   display: flex;
-  gap: 24px;
-  width: 100%;
-  min-width: 0;
-  overflow-x: auto;
-  scroll-snap-type: x mandatory;
-  scrollbar-width: thin;
-  scroll-behavior: smooth;
+  width: max-content;
+  animation: logosMove 52s linear infinite;
 }
 
-.clients-arrow {
-  flex: 0 0 38px;
-  width: 38px;
-  height: 42px;
-  border: 1px solid #cbd9d0;
-  border-radius: 10px;
-  background: #ffffff;
-  color: #0b5a32;
-  font-size: 27px;
-  cursor: pointer;
+.clients-group {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  padding-right: 24px;
 }
-.clients-arrow:hover { background: #e6f2eb; }
-.clients-arrow:focus-visible, .clients-grid:focus-visible { outline: 3px solid #0b5a32; outline-offset: 2px; }
-.clients-grid .client-logo {
-  scroll-snap-align: start;
+.clients-carousel:hover .clients-grid,
+.clients-carousel:focus-within .clients-grid {
+  animation-play-state: paused;
 }
 
 .client-logo.client-logo-dark {
@@ -1484,6 +1471,11 @@ textarea {
     margin-top: 30px;
   }
 
+  .clients-group {
+    gap: 20px;
+    padding-right: 20px;
+  }
+
   .client-logo {
     width: 150px;
     height: 90px;
@@ -1661,7 +1653,9 @@ textarea {
   }
 }
 @media (prefers-reduced-motion: reduce) {
-  .clients-grid { scroll-behavior: auto; }
+  .clients-carousel { overflow-x: auto; }
+  .clients-grid { animation: none; }
+  .clients-group[aria-hidden="true"] { display: none; }
 }
 
 /* Galería de trabajos: colores y proporciones de la web publicada. */
