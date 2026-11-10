@@ -1,5 +1,6 @@
 import Navbar from "./components/Navbar.jsx";
 import Hero from "./components/Hero.jsx";
+import PhotoGallery from "./components/PhotoGallery.jsx";
 import "./App.css";
 
 import hospitalItaliano from "./assets/logos/hospital italiano.png";
@@ -12,14 +13,41 @@ import seguridad from "./assets/logos/ministerio de seguridad.png";
 import radioMaria from "./assets/logos/radio maria.png";
 import institutoCentral from "./assets/logos/Escudo_Instituto_Atletico_Central_Cordobna-4.png";
 
-import ascensorTerminado from "./assets/galeria/ascensor-terminado-1.png";
-import camioneta from "./assets/galeria/camioneta.png";
-import trabajando from "./assets/galeria/Trabajando.png";
+
+import yuhmak from "./assets/logos/yuhmak.png";
+import medicina from "./assets/logos/logo_fcm.png";
+import famaf from "./assets/logos/Logo_FAMAF_color_pleno.png";
+import economia from "./assets/logos/Logo_Dto_EyF.jpg";
+import ministerioPublico from "./assets/logos/Logo-Esc-MPF_color_blanco.png";
+import fecescor from "./assets/logos/fecescor.png";
+import lenguas from "./assets/logos/facu de lenguas.png";
+import quimicas from "./assets/logos/cs quimicas.png";
+import cooperativas from "./assets/logos/cooperativas mutuales.png";
+import campusVirtual from "./assets/logos/campusvirtual_banner.jpg";
+
+const clientes = [
+  [hospitalItaliano, "Hospital Italiano"],
+  [bancor, "Bancor"],
+  [yelicich, "Administración Yelicich"],
+  [renault, "Renault"],
+  [conicet, "CONICET"],
+  [fcefyn, "Facultad de Ciencias Exactas, Físicas y Naturales"],
+  [seguridad, "Ministerio de Seguridad de Córdoba"],
+  [radioMaria, "Radio María"],
+  [institutoCentral, "Instituto Atlético Central Córdoba"],
+  [yuhmak, "Yuhmak"],
+  [medicina, "Facultad de Ciencias Médicas"],
+  [famaf, "FAMAF"],
+  [economia, "Departamento de Economía y Finanzas"],
+  [ministerioPublico, "Ministerio Público Fiscal", true],
+  [fecescor, "Fecescor"],
+  [lenguas, "Facultad de Lenguas"],
+  [quimicas, "Facultad de Ciencias Químicas"],
+  [cooperativas, "Cooperativas y mutuales"],
+  [campusVirtual, "Campus Virtual"],
+];
 
 function IconPhone() {
-  const whatsappUrgencias =
-    "https://wa.me/5493512700691?text=Hola%20Huemul%20Ascensores%2C%20necesito%20asistencia%20urgente";
-
   return (
     <svg viewBox="0 0 24 24" aria-hidden="true">
       <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.79 19.79 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.12.9.33 1.78.62 2.64a2 2 0 0 1-.45 2.11L8 9.75a16 16 0 0 0 6 6l1.28-1.28a2 2 0 0 1 2.11-.45c.86.29 1.74.5 2.64.62A2 2 0 0 1 22 16.92z" />
@@ -193,22 +221,7 @@ function App() {
               modernizaciones mecánicas y renovaciones estéticas de cabina.
             </p>
 
-            <div className="gallery-placeholder">
-              <img
-                src={ascensorTerminado}
-                alt=""
-              />
-
-              <img
-                src={camioneta}
-                alt=""
-              />
-
-              <img
-                src={trabajando}
-                alt=""
-              />
-            </div>
+            <PhotoGallery />
           </div>
         </section>
 
@@ -229,68 +242,17 @@ function App() {
               primer nivel en toda la provincia.
             </p>
 
-            <div className="clients-grid">
-              <div className="client-logo">
-                <img
-                  src={hospitalItaliano}
-                  alt="Hospital Italiano"
-                />
-              </div>
-
-              <div className="client-logo">
-                <img
-                  src={bancor}
-                  alt="Bancor"
-                />
-              </div>
-
-              <div className="client-logo">
-                <img
-                  src={yelicich}
-                  alt="Administración Yelicich"
-                />
-              </div>
-
-              <div className="client-logo">
-                <img
-                  src={renault}
-                  alt="Renault"
-                />
-              </div>
-
-              <div className="client-logo">
-                <img
-                  src={conicet}
-                  alt="CONICET"
-                />
-              </div>
-
-              <div className="client-logo">
-                <img
-                  src={fcefyn}
-                  alt="Facultad de Ciencias Exactas, Físicas y Naturales"
-                />
-              </div>
-
-              <div className="client-logo">
-                <img
-                  src={seguridad}
-                  alt="Ministerio de Seguridad de Córdoba"
-                />
-              </div>
-
-              <div className="client-logo">
-                <img
-                  src={radioMaria}
-                  alt="Radio María"
-                />
-              </div>
-
-              <div className="client-logo">
-                <img
-                  src={institutoCentral}
-                  alt="Instituto Atlético Central Córdoba"
-                />
+            <div className="clients-carousel" role="region" aria-label="Clientes de Huemul" tabIndex={0}>
+              <div className="clients-grid">
+                {[0, 1].map((copia) => (
+                  <div className="clients-group" key={copia} aria-hidden={copia === 1 ? true : undefined}>
+                    {clientes.map(([src, nombre, oscuro]) => (
+                      <div className={`client-logo${oscuro ? " client-logo-dark" : ""}`} key={nombre}>
+                        <img src={src} alt={copia === 0 ? nombre : ""} />
+                      </div>
+                    ))}
+                  </div>
+                ))}
               </div>
             </div>
           </div>

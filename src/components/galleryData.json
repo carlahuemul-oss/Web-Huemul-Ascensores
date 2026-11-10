@@ -1,0 +1,162 @@
+[
+  {
+    "id": 1,
+    "title": "Elevador panorámico en edificio",
+    "description": "Vista exterior del elevador con cerramiento vidriado",
+    "category": "Instalaciones",
+    "phase": "Resultado",
+    "image": "imagenes/obra-01.webp"
+  },
+  {
+    "id": 2,
+    "title": "Montaje de cerramiento vidriado",
+    "description": "Trabajos de instalación de estructura y fachada de elevador",
+    "category": "Instalaciones",
+    "phase": "En obra",
+    "image": "imagenes/obra-02.webp"
+  },
+  {
+    "id": 3,
+    "title": "Acceso de ascensor en obra",
+    "description": "Frente de ascensor con puertas de acero inoxidable",
+    "category": "Instalaciones",
+    "phase": "En obra",
+    "image": "imagenes/obra-03.webp"
+  },
+  {
+    "id": 4,
+    "title": "Montaje de cabina y estructura",
+    "description": "Cabina de ascensor con estructura y mecanismos a la vista",
+    "category": "Instalaciones",
+    "phase": "En obra",
+    "image": "imagenes/obra-04.webp"
+  },
+  {
+    "id": 5,
+    "title": "Personal técnico en instalación",
+    "description": "Técnicos de Huemul realizando trabajos sobre una cabina",
+    "category": "Equipo técnico",
+    "phase": "En obra",
+    "image": "imagenes/obra-05.webp"
+  },
+  {
+    "id": 6,
+    "title": "Montaje de cabina de elevador",
+    "description": "Revestimiento metálico de cabina durante la instalación",
+    "category": "Instalaciones",
+    "phase": "En obra",
+    "image": "imagenes/obra-06.webp"
+  },
+  {
+    "id": 7,
+    "title": "Control de maniobras anterior",
+    "description": "Tablero eléctrico de maniobras previo a modernización",
+    "category": "Modernizaciones",
+    "phase": "Antes",
+    "image": "imagenes/obra-07.webp"
+  },
+  {
+    "id": 8,
+    "title": "Control electrónico modernizado",
+    "description": "Tablero de maniobras electrónico con variador de frecuencia",
+    "category": "Modernizaciones",
+    "phase": "Después",
+    "image": "imagenes/obra-08.webp"
+  },
+  {
+    "id": 9,
+    "title": "Operador de puerta de cabina",
+    "description": "Mecanismo de apertura de puertas de ascensor",
+    "category": "Modernizaciones",
+    "phase": "Detalle técnico",
+    "image": "imagenes/obra-09.webp"
+  },
+  {
+    "id": 10,
+    "title": "Intervención en sala de máquinas",
+    "description": "Personal de Huemul trabajando sobre una máquina de tracción",
+    "category": "Equipo técnico",
+    "phase": "En obra",
+    "image": "imagenes/obra-10.webp"
+  },
+  {
+    "id": 11,
+    "title": "Trabajo sobre máquina de tracción",
+    "description": "Dos técnicos durante una intervención mecánica",
+    "category": "Equipo técnico",
+    "phase": "En obra",
+    "image": "imagenes/obra-11.webp"
+  },
+  {
+    "id": 12,
+    "title": "Poleas y sistema de tracción",
+    "description": "Conjunto de poleas de desvío y máquina de elevación",
+    "category": "Modernizaciones",
+    "phase": "Detalle técnico",
+    "image": "imagenes/obra-12.webp"
+  },
+  {
+    "id": 13,
+    "title": "Piso de cabina original",
+    "description": "Estado previo de un piso de cabina de ascensor",
+    "category": "Cabinas",
+    "phase": "Antes",
+    "image": "imagenes/obra-13.webp"
+  },
+  {
+    "id": 14,
+    "title": "Piso de cabina renovado",
+    "description": "Piso de cabina con nuevo revestimiento de terminación",
+    "category": "Cabinas",
+    "phase": "Después",
+    "image": "imagenes/obra-14.webp"
+  },
+  {
+    "id": 15,
+    "title": "Piso deteriorado antes de la reforma",
+    "description": "Estado previo del piso de una cabina de acero inoxidable",
+    "category": "Cabinas",
+    "phase": "Antes",
+    "image": "imagenes/obra-15.webp"
+  },
+  {
+    "id": 16,
+    "title": "Nueva terminación de piso",
+    "description": "Revestimiento nuevo instalado en cabina de ascensor",
+    "category": "Cabinas",
+    "phase": "Después",
+    "image": "imagenes/obra-16.webp"
+  },
+  {
+    "id": 17,
+    "title": "Botonera exterior anterior",
+    "description": "Panel exterior de llamada antes del reemplazo",
+    "category": "Modernizaciones",
+    "phase": "Antes",
+    "image": "imagenes/obra-17.webp"
+  },
+  {
+    "id": 18,
+    "title": "Botonera exterior renovada",
+    "description": "Nuevo panel de llamada de acero inoxidable con indicador luminoso",
+    "category": "Modernizaciones",
+    "phase": "Después",
+    "image": "imagenes/obra-18.webp"
+  },
+  {
+    "id": 19,
+    "title": "Personal en logística de instalación",
+    "description": "Equipo de Huemul organizando componentes para una instalación",
+    "category": "Logística",
+    "phase": "En obra",
+    "image": "imagenes/obra-19.webp"
+  },
+  {
+    "id": 20,
+    "title": "Unidad móvil de Huemul",
+    "description": "Vehículo identificado para servicios de mantenimiento de ascensores",
+    "category": "Logística",
+    "phase": "Flota",
+    "image": "imagenes/obra-20.webp"
+  }
+]
