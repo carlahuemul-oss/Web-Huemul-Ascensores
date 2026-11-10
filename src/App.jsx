@@ -14,6 +14,10 @@ import seguridad from "./assets/logos/ministerio de seguridad.png";
 import radioMaria from "./assets/logos/radio maria.png";
 import institutoCentral from "./assets/logos/Escudo_Instituto_Atletico_Central_Cordobna-4.png";
 
+import ascensorTerminado from "./assets/galeria/ascensor-terminado-1.png";
+import camioneta from "./assets/galeria/camioneta.png";
+import trabajando from "./assets/galeria/Trabajando.png";
+
 
 import yuhmak from "./assets/logos/yuhmak.png";
 import medicina from "./assets/logos/logo_fcm.png";
@@ -228,6 +232,12 @@ function App() {
               Registro de nuestras intervenciones técnicas,
               modernizaciones mecánicas y renovaciones estéticas de cabina.
             </p>
+
+            <div className="gallery-placeholder">
+              <img src={ascensorTerminado} alt="Ascensor terminado por Huemul" />
+              <img src={camioneta} alt="Camioneta de Huemul Ascensores" />
+              <img src={trabajando} alt="Equipo de Huemul trabajando" />
+            </div>
 
             <PhotoGallery />
           </div>
