@@ -1,6 +1,10 @@
+import { useState } from "react";
+
 export default function Navbar() {
+  const [menuOpen, setMenuOpen] = useState(false);
 
   const irA = (id) => {
+    setMenuOpen(false);
     document.getElementById(id)?.scrollIntoView({
       behavior: "smooth",
       block: "start",
@@ -28,7 +32,12 @@ export default function Navbar() {
       </button>
 
 
-      <div className="navbar-menu">
+      <button className="hamburger" type="button" aria-label={menuOpen ? "Cerrar menú" : "Abrir menú"}
+        aria-expanded={menuOpen} aria-controls="menu-principal" onClick={() => setMenuOpen(!menuOpen)}>
+        <span></span><span></span><span></span>
+      </button>
+
+      <div id="menu-principal" className={`navbar-menu${menuOpen ? " open" : ""}`}>
 
         <button onClick={() => irA("inicio")}>
           Inicio

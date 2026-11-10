@@ -621,6 +621,28 @@ textarea {
   animation-play-state: paused;
 }
 
+.clients-show-all {
+  display: block;
+  margin: 18px auto 0;
+  padding: 10px 16px;
+  border: 1px solid #0b5a32;
+  border-radius: 8px;
+  background: #ffffff;
+  color: #0b5a32;
+  font-size: 13px;
+  font-weight: 800;
+  cursor: pointer;
+}
+.clients-show-all:hover { background: #e6f2eb; }
+.clients-show-all:focus-visible { outline: 3px solid #0b5a32; outline-offset: 2px; }
+.clients-all-grid:not([hidden]) {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 14px;
+  margin-top: 20px;
+}
+.clients-all-grid .client-logo { width: 100%; }
+
 /* =========================================================
    UBICACIÓN
 ========================================================= */

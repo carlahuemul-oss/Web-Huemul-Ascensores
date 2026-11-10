@@ -1,3 +1,4 @@
+import { useState } from "react";
 import Navbar from "./components/Navbar.jsx";
 import Hero from "./components/Hero.jsx";
 import PhotoGallery from "./components/PhotoGallery.jsx";
@@ -134,6 +135,7 @@ function IconInstalaciones() {
 
 function App() {
   const whatsappUrgencias = "https://wa.me/5493512700691";
+  const [showAllClients, setShowAllClients] = useState(false);
 
   return (
     <div className="app">
@@ -254,6 +256,15 @@ function App() {
                   </div>
                 ))}
               </div>
+            </div>
+            <button className="clients-show-all" type="button" aria-expanded={showAllClients}
+              aria-controls="clients-all-grid" onClick={() => setShowAllClients(!showAllClients)}>
+              {showAllClients ? "Ocultar logos" : `Ver los ${clientes.length} logos de clientes`}
+            </button>
+            <div id="clients-all-grid" className="clients-all-grid" hidden={!showAllClients}>
+              {clientes.map(([src, nombre, oscuro]) => <div className={`client-logo${oscuro ? " client-logo-dark" : ""}`} key={nombre}>
+                <img src={src} alt={nombre} loading="lazy" />
+              </div>)}
             </div>
           </div>
         </section>
