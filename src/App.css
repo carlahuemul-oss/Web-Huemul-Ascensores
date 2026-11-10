@@ -560,21 +560,38 @@ textarea {
 ========================================================= */
 
 .clients-carousel {
-  overflow: hidden;
+  display: flex;
+  align-items: center;
+  gap: 10px;
   margin-top: 45px;
 }
 
 .clients-grid {
   display: flex;
-  width: max-content;
-  animation: logosMove 65s linear infinite;
+  gap: 24px;
+  width: 100%;
+  min-width: 0;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: thin;
+  scroll-behavior: smooth;
 }
 
-.clients-group {
-  display: flex;
-  align-items: center;
-  gap: 24px;
-  padding-right: 24px;
+.clients-arrow {
+  flex: 0 0 38px;
+  width: 38px;
+  height: 42px;
+  border: 1px solid #cbd9d0;
+  border-radius: 10px;
+  background: #ffffff;
+  color: #0b5a32;
+  font-size: 27px;
+  cursor: pointer;
+}
+.clients-arrow:hover { background: #e6f2eb; }
+.clients-arrow:focus-visible, .clients-grid:focus-visible { outline: 3px solid #0b5a32; outline-offset: 2px; }
+.clients-grid .client-logo {
+  scroll-snap-align: start;
 }
 
 .client-logo.client-logo-dark {
@@ -616,32 +633,6 @@ textarea {
   }
 }
 
-.clients-carousel:hover .clients-grid,
-.clients-carousel:focus-within .clients-grid {
-  animation-play-state: paused;
-}
-
-.clients-show-all {
-  display: block;
-  margin: 18px auto 0;
-  padding: 10px 16px;
-  border: 1px solid #0b5a32;
-  border-radius: 8px;
-  background: #ffffff;
-  color: #0b5a32;
-  font-size: 13px;
-  font-weight: 800;
-  cursor: pointer;
-}
-.clients-show-all:hover { background: #e6f2eb; }
-.clients-show-all:focus-visible { outline: 3px solid #0b5a32; outline-offset: 2px; }
-.clients-all-grid:not([hidden]) {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-  gap: 14px;
-  margin-top: 20px;
-}
-.clients-all-grid .client-logo { width: 100%; }
 
 /* =========================================================
    UBICACIÓN
@@ -1493,11 +1484,6 @@ textarea {
     margin-top: 30px;
   }
 
-  .clients-group {
-    gap: 20px;
-    padding-right: 20px;
-  }
-
   .client-logo {
     width: 150px;
     height: 90px;
@@ -1675,9 +1661,7 @@ textarea {
   }
 }
 @media (prefers-reduced-motion: reduce) {
-  .clients-carousel { overflow-x: auto; }
-  .clients-grid { animation: none; }
-  .clients-group[aria-hidden="true"] { display: none; }
+  .clients-grid { scroll-behavior: auto; }
 }
 
 /* Galería de trabajos: colores y proporciones de la web publicada. */
