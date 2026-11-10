@@ -231,6 +231,22 @@ function App() {
               <img src={trabajando} alt="Equipo de Huemul trabajando" />
             </div>
 
+            <div className="gallery-video-feature">
+              <div className="gallery-video-copy">
+                <p className="section-eyebrow">VISTA EXPLOTADA 3D</p>
+                <h3>Un ascensor, pieza por pieza.</h3>
+                <p>Mirá cómo se organiza el sistema y descubrí algunos de sus componentes en esta visualización animada.</p>
+                <small>Representación visual ilustrativa.</small>
+              </div>
+              <div className="gallery-video-frame">
+                <video controls playsInline preload="metadata" poster="/vista-explotada-huemul-poster.jpg"
+                  aria-label="Vista explotada 3D de un ascensor Huemul, video de 20 segundos">
+                  <source src="/vista-explotada-huemul.mp4" type="video/mp4" />
+                  Tu navegador no puede reproducir este video.
+                </video>
+              </div>
+            </div>
+
             <PhotoGallery />
           </div>
         </section>
