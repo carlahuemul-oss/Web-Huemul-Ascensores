@@ -305,7 +305,7 @@ function App() {
 
               <a
                 className="location-button"
-                href="https://www.google.com/maps/search/?api=1&query=Justo+José+de+Urquiza+733,+Córdoba"
+                href="https://www.google.com/maps/place/Ascensores+Huemul/@-31.4044693,-64.1901842,17z/data=!4m16!1m8!3m7!1s0x9432987c964988b3:0x8ecd93044f7f721d!2sJusto+José+de+Urquiza+733,+X5000+Córdoba!3b1!8m2!3d-31.4044693!4d-64.1901842!16s%2Fg%2F11y3m29bg2!3m6!1s0x943298be173c8529:0xedfe405b5935499b!8m2!3d-31.4044713!4d-64.1901331!10e1!16s%2Fg%2F11bbrk352_?entry=ttu"
                 target="_blank"
                 rel="noreferrer"
               >
@@ -316,7 +316,7 @@ function App() {
             <div className="location-map">
               <iframe
                 title="Ubicación de Huemul Ascensores"
-                src="https://www.google.com/maps?q=Justo+José+de+Urquiza+733,+Córdoba&output=embed"
+                src="https://www.google.com/maps?q=Ascensores+Huemul,+Justo+José+de+Urquiza+733,+Córdoba&output=embed"
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
               />
